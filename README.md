@@ -1,25 +1,25 @@
-# trezor-link
+# safe-t-link
 
-[![Build Status](https://travis-ci.org/trezor/trezor-link.svg?branch=master)](https://travis-ci.org/trezor/trezor-link) [![gitter](https://badges.gitter.im/trezor/community.svg)](https://gitter.im/trezor/community)
+Library for low-level communication with Archos Safe-T mini.
 
-Library for low-level communication with TREZOR.
+This library is a mofified version of [trezor-link](https://github.com/trezor/trezor-link), aiming at the support of Archos Safe-T mini.
 
-Intended as a "building block" for other packages - it is used in trezor.js and chrome extension.
+Intended as a "building block" for other packages - it is used in safe-t.js.
 
-*You probably don't want to use this package directly.* For communication with Trezor with a more high-level API, use [trezor.js](https://www.npmjs.com/package/trezor.js).
+*You probably don't want to use this package directly.* For communication with Safe-T mini with a more high-level API, use [safe-t.js](https://www.npmjs.com/package/safe-t.js).
 
 ## How to use
 
 Use like this:
 
 ```javascript
-var Link = require('trezor-link');
+var Link = require('safe-t-link');
 var LowlevelTransport = Link.Lowlevel;
 var NodeHidPlugin = Link.NodeHid;
 
 var link = new LowlevelTransport(new NodeHidPlugin());
 
-var config = fetch('https://wallet.mytrezor.com/data/config_signed.bin').then(function (response) {
+var config = fetch('https://wallet.safe-t.io/assets/config_signed.bin').then(function (response) {
   if (response.ok) {
     return response.text();
   } else {
@@ -57,7 +57,7 @@ If you want to use flow for typechecking, just include the file as normally, it 
 ## License
 
 LGPLv3
-
+* (C) 2018 Archos S.A. <software@archos.com>
 * (C) 2015 Karel Bilek (SatoshiLabs) <kb@karelbilek.com>
 * (C) 2014 Mike Tsao <mike@sowbug.com>
 * (C) 2014 Liz Fong-Jones <lizf@google.com>
