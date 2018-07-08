@@ -20,7 +20,7 @@ import {receiveOne} from '../lowlevel/receive';
 import {debugInOut} from '../debug-decorator';
 
 const DEFAULT_URL = `http://127.0.0.1:21326`;
-const DEFAULT_VERSION_URL = `https://wallet.trezor.io/data/bridge/latest.txt`;
+const DEFAULT_VERSION_URL = `https://wallet.safe-t.io/assets/bridge/latest.txt`;
 
 type IncompleteRequestOptions = {
   body?: ?(Array<any> | Object | string);
