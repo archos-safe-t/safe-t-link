@@ -9,6 +9,10 @@ import {debugInOut} from '../debug-decorator';
 type TrezorDeviceInfo = {path: string};
 
 const TREZOR_DESCS = [
+  // ARCHOS Safe-T mini Bootloader
+  { vendorId: 0x0E79, productId: 0x6001 },
+  // ARCHOS Safe-T mini Firmware
+  { vendorId: 0x0E79, productId: 0x6000 },
   // TREZOR v1
   { vendorId: 0x534c, productId: 0x0001 },
   // TREZOR v2 Bootloader
