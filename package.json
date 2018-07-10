@@ -1,6 +1,6 @@
 {
   "name": "safe-t-link",
-  "version": "1.3.8",
+  "version": "1.0.1",
   "description": "Safe-T Link for browser",
   "main": "lib/index.js",
   "scripts": {
